@@ -1,0 +1,55 @@
+.nearby-destination {
+    .nearby-destination-items {
+        .owl-stage-outer {
+            padding-top: 20px;
+        }
+        .nearby-destination-item {
+            position: relative;
+            // transition: .5s;
+            &.diff {
+                margin-top: -16.5px;
+            }
+            &:hover {
+                .destination-love-icon {
+                    color: #FC3B81;
+
+                }
+            }
+
+            .destination-img { 
+                img {}
+            }
+
+            .destination-love-icon {
+                position: absolute;
+                top: 15px;
+                right: 25px;
+                color: $white;
+
+                i.fa {
+                    // transition: .5s;
+                }
+            }
+
+            .destination-content {
+                position: absolute;
+                bottom: 20px;
+                color: #fff;
+                letter-spacing: 7px;
+                text-align: center;
+                width: calc(100% - 20px);
+                p.city { 
+                    font-family: $secondary-font;
+                    font-size: 30px;
+                    line-height: 36px;
+                }
+
+                p.country { 
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 25px;
+                }
+            }
+        }
+    }
+}

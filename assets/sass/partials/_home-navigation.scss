@@ -1,0 +1,100 @@
+/* Home Navigation */
+section#home-navigation {
+    background: #EFF6FF;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+
+    @include lg-max {
+        overflow-x: scroll;
+        transition: .5s;
+        transform: translateY(-100%);
+
+        .container {
+            width: 1250px;
+            max-width: 1250px;
+        }
+    }
+
+
+    nav.home-navigation {
+        ul {
+            li {
+                margin-right: 40px;
+
+                &:first-child {
+                    a {
+                        color: $blue;
+
+                        &:after {
+                            transform: scaleX(1);
+                        }
+                    }
+                }
+
+                a {
+                    color: #140930;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 35px;
+                    position: relative;
+                    padding: 20px 0;
+
+                    @include tab-max {
+                        padding: 3px 0;
+                        font-size: 14px;
+                    }
+
+                    &:after {
+                        position: absolute;
+                        height: 2px;
+                        bottom: 0;
+                        width: calc(100% + 14px);
+                        background: $blue;
+                        content: " ";
+                        left: -7px;
+                        transition: .5s;
+                        transform: scaleX(0);
+                    }
+
+                    &:hover {
+                        color: $blue;
+
+                        &:after {
+                            transform: scaleX(1);
+                        }
+                    }
+                }
+            }
+        }
+
+        .home-nav-date {
+            .calendar-wrap {
+                background: #fff;
+                width: 185px;
+                border-radius: 10px;
+                position: relative;
+
+                img {
+                    position: absolute;
+                    left: 15px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+                input {
+                    border: 0;
+                    background: 0;
+                    width: 100%;
+                    padding: 10px 5px 10px 40px;
+
+                    @include tab-max {
+                        padding: 5px 5px 5px 40px;
+                    }
+
+                }
+            }
+
+        }
+    }
+}
